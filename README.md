@@ -1,2 +1,76 @@
 # trading_bot-
 a Simplified Trading Bot (Binance Futures Testnet)
+
+
+# Binance Futures Testnet Trading Bot
+
+A simple Python CLI application that places BUY and SELL MARKET/LIMIT orders on Binance USDT-M Futures Testnet.
+
+## Features
+
+- MARKET Orders
+- LIMIT Orders
+- BUY / SELL Support
+- Command Line Interface
+- Logging
+- Input Validation
+- Exception Handling
+
+## Project Structure
+
+```
+trading_bot/
+│
+├── bot/
+│   ├── client.py
+│   ├── orders.py
+│   ├── validators.py
+│   └── logging_config.py
+│
+├── logs/
+├── cli.py
+├── requirements.txt
+├── README.md
+└── .env
+```
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configure
+
+Create a `.env` file
+
+```
+API_KEY=YOUR_KEY
+API_SECRET=YOUR_SECRET
+```
+
+## MARKET Order
+
+```bash
+python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+```
+
+## LIMIT Order
+
+```bash
+python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 120000
+```
+
+## Logs
+
+Logs are stored in
+
+```
+logs/bot.log
+```
+
+## Assumptions
+
+- Binance Futures Testnet account is active.
+- API credentials are valid.
+- Trading symbol exists.
