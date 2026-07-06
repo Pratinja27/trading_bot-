@@ -13,6 +13,15 @@ A simple Python CLI application that places BUY and SELL MARKET/LIMIT orders on 
 - Input Validation
 - Exception Handling
 
+  ## Technologies
+
+- Python
+- python-binance
+- python-dotenv
+- argparse
+- requests
+- logging
+
 ## Project Structure
 
 ```
@@ -65,7 +74,11 @@ Logs are stored in
 ```
 logs/bot.log
 ```
+## Assumptions
 
+- Valid Binance Testnet credentials
+- Python 3.x
+- Internet connection
 
 ## Note
 
