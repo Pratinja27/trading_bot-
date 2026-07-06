@@ -1,6 +1,3 @@
-# trading_bot-
-a Simplified Trading Bot (Binance Futures Testnet)
-
 
 # Binance Futures Testnet Trading Bot
 
