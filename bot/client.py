@@ -22,3 +22,9 @@ class BinanceClient:
 
     def get_client(self):
         return self.client
+
+    def ping(self):
+        try:
+            return self.client.futures_ping()
+        except Exception as e:
+            raise Exception(f"Unable to connect to Binance Testnet: {e}")
