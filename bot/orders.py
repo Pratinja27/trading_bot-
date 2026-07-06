@@ -25,7 +25,7 @@ class OrderManager:
 
             logger.info(f"MARKET Order Response: {response}")
 
-            return response
+            return self.get_order_details(response)
 
         except BinanceAPIException as e:
             logger.error(f"Binance API Error: {e}")
@@ -56,7 +56,7 @@ class OrderManager:
 
             logger.info(f"LIMIT Order Response: {response}")
 
-            return response
+            return self.get_order_details(response)
 
         except BinanceAPIException as e:
             logger.error(f"Binance API Error: {e}")
@@ -69,3 +69,12 @@ class OrderManager:
         except Exception as e:
             logger.error(f"Unexpected Error: {e}")
             raise
+
+    @staticmethod
+    def get_order_details(response):
+        return {
+             "orderId": response.get("orderId"),
+              "status": response.get("status"),
+              "executedQty": response.get("executedQty"),
+             "avgPrice": response.get("avgPrice")
+        }

@@ -69,8 +69,9 @@ Logs are stored in
 logs/bot.log
 ```
 
-## Assumptions
 
-- Binance Futures Testnet account is active.
-- API credentials are valid.
-- Trading symbol exists.
+## Note
+
+This project is fully implemented according to the assignment requirements using the `python-binance` library.
+
+Due to account verification restrictions, I was unable to generate Binance Futures Testnet API credentials to execute live test orders. The application includes complete order placement logic, input validation, logging, exception handling, and CLI support. Once valid Testnet API credentials are provided, it is ready to place MARKET and LIMIT orders without further code changes.

@@ -12,6 +12,11 @@ class BinanceClient:
         api_key = os.getenv("API_KEY")
         api_secret = os.getenv("API_SECRET")
 
+        if not api_key or not api_secret:
+            raise ValueError(
+                "API credentials not found. Please configure your .env file."
+            )
+
         self.client = Client(
             api_key,
             api_secret,
